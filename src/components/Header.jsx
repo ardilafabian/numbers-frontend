@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assests/static/kiwi-logo.png";
-import "../assests/styles/components/Header.scss";
+import logo from "@assets/static/kiwi-logo.png";
+import "@assets/styles/components/Header.scss";
 import { Link } from "react-router-dom";
 
 const Header = () => (

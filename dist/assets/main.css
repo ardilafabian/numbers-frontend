@@ -1,0 +1,48 @@
+/*!***********************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/styles/components/Header.scss ***!
+  \***********************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap);
+/*!***************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/styles/components/Header.scss (1) ***!
+  \***************************************************************************************************************************************/
+.header {
+  height: 8rem;
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.2rem; }
+  .header img {
+    height: 5rem;
+    width: auto; }
+
+@media (max-width: 600px) {
+  .header {
+    height: 15rem;
+    flex-direction: column; } }
+
+/*!*********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/styles/App.scss ***!
+  \*********************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap);
+/*!*************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/styles/App.scss (1) ***!
+  \*************************************************************************************************************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  background-color: #eeeeee; }
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", "sans-seri"; }
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit; }
+

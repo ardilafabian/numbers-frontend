@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "../views/Home";
-import "../assests/styles/App.scss";
+import Home from "@views/Home";
+import "@assets/styles/App.scss";
 
 const App = () => (
   <BrowserRouter>
