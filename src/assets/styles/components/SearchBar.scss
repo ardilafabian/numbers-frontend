@@ -1,0 +1,32 @@
+@import "@assets/styles/Vars.scss";
+
+.searchBar {
+  display: flex;
+  margin-left: 3rem;
+  width: 80%;
+  height: 5rem;
+  & input {
+    width: 100%;
+    border: none;
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    color: $color-darkgrey;
+  }
+  & input:focus {
+    outline: none;
+  }
+  & button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    & img {
+      height: 2.5rem;
+      margin: 1rem;
+    }
+  }
+}
