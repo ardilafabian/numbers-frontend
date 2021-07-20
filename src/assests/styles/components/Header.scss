@@ -1,0 +1,21 @@
+@import "../Vars.scss";
+
+.header {
+  height: 8rem;
+  background-color: $color-background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.2rem;
+  & img {
+    height: 5rem;
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 15rem;
+    flex-direction: column;
+  }
+}
