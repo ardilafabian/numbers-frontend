@@ -40,7 +40,7 @@ const Body = () => {
                 <input
                     onChange={handleInputChange}
                     onKeyDown={handleKeyDown}
-                    type="text"
+                    type="number"
                     className="input"
                     placeholder={STRINGS.SEARCH_BAR.INPUT_PLACEHOLDER}
                 />
