@@ -1,0 +1,18 @@
+@import "@assets/styles/Vars.scss";
+
+.description {
+    width: 80%;
+    margin-left: 10%;
+    font-family: $theme-font;
+
+    &__text {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: larger;
+    }
+
+    &__indications {
+        font-size: small;
+        margin-bottom: 10px;
+    }
+}
