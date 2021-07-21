@@ -15,6 +15,16 @@ const Header = (props) => (
           <p className="header__buttons__button">Algorithm</p>
         </Link>
       }
+      {props.module !== 'process' &&
+        <Link to="/process">
+          <p className="header__buttons__button">Explanation</p>
+        </Link>
+      }
+      {props.module !== 'home' &&
+        <Link to="/">
+          <p className="header__buttons__button">Home</p>
+        </Link>
+      }
     </div>
   </header>
 );
