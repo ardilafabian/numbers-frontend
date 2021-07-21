@@ -5,11 +5,36 @@
   background-color: $color-darkgrey;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 3.2rem;
+  font-family: $theme-font;
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 25px;
+    margin-right: 20px;
+
+    &__button {
+      margin-left: 10px;
+      border: 1px solid white;
+      border-bottom-right-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      border-top-left-radius: 0.5rem;
+    }
+
+    & p {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
   & img {
     height: 5rem;
     width: auto;
+    margin-left: 20px;
   }
 }
 
