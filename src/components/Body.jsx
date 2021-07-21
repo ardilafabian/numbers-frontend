@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import STRINGS from "@constants/strings";
 import "@assets/styles/components/Body.scss";
 import { fetchGet } from "@utils/fetchApi";
@@ -12,6 +12,7 @@ const Body = () => {
     const handleInputChange = (e) => {
         setData(e.target.value);
     };
+    
     const handleSearch = () => {
         result['loaded'] = false;
         const rq = {array: data.split(' ').map(Number)}
@@ -28,7 +29,7 @@ const Body = () => {
         }
     };
     return (
-        <section>
+        <section className="bodySection">
             <div className="searchBar">
                 <input
                     onChange={handleInputChange}
@@ -44,17 +45,42 @@ const Body = () => {
             <div className="resultBody">
                 {result.loaded &&
                     <div>
-                        Index: {result.index}
-                        <br></br>
-                        Result Sum: {result.sum}
-                        <br></br>
-                        Array #1: {result.leftArray}
-                        <br></br>
-                        Array #2: {result.rightArray}
+                        <div className="resultBody__item">
+                            <div className="resultBody__item__label">
+                                Index: 
+                            </div>
+                            <div className="resultBody__item__input">
+                                {result.index}
+                            </div>
+                        </div>
+                        <div className="resultBody__item">
+                            <div className="resultBody__item__label">
+                                Result Sum: 
+                            </div>
+                            <div className="resultBody__item__input">
+                                {result.sum}
+                            </div>
+                        </div>
+                        <div className="resultBody__item">
+                            <div className="resultBody__item__label">
+                                Array #1: 
+                            </div>
+                            <div className="resultBody__item__input">
+                                {result.leftArray}
+                            </div>
+                        </div>
+                        <div className="resultBody__item">
+                            <div className="resultBody__item__label">
+                                Array #2: 
+                            </div>
+                            <div className="resultBody__item__input">
+                                {result.rightArray}
+                            </div>
+                        </div>
                     </div>
                 }
                 {!result.loaded &&
-                    <div>
+                    <div className="loader">
                         <LoaderCircle />
                     </div>
                 }
