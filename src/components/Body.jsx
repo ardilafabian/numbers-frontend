@@ -9,7 +9,7 @@ import Description from "@components/Description";
 const Body = () => {
     const [result, setResult] = useState({ loaded: false });
     const [data, setData] = useState({ array: [] })
-    const [rqSent, setRqSent] = useState(false)
+    const [error, setError] = useState(false);
 
     const handleInputChange = (e) => {
         setData(e.target.value);
@@ -21,7 +21,10 @@ const Body = () => {
         fetchGet('/numbers/sum', rq).then((result) => {
             result['loaded']= true;
             console.log(result);
+            setError(false);
             setResult(result);
+        }).catch(e => {
+            setError(true);
         });
     };
 
@@ -69,7 +72,7 @@ const Body = () => {
                                 Array #1: 
                             </div>
                             <div className="resultBody__item__input">
-                                {result.leftArray}
+                                [{result.leftArray.toString()}]
                             </div>
                         </div>
                         <div className="resultBody__item">
@@ -77,15 +80,14 @@ const Body = () => {
                                 Array #2: 
                             </div>
                             <div className="resultBody__item__input">
-                                {result.rightArray}
+                                [{result.rightArray.toString()}]
                             </div>
                         </div>
                     </div>
                 }
-                {!result.loaded &&
-                    <div className="loader">
-                        <LoaderCircle />
-                    </div>
+                
+                {error &&
+                    <div className="error">Error, please verify your syntax is according to specification.</div>
                 }
             </div>
         </section>);

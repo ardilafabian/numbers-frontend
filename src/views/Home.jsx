@@ -4,7 +4,7 @@ import Body from "@components/Body"
 
 const Home = () => (
   <div>
-    <Header />
+    <Header module="home"/>
     <Body />
   </div>
 );
